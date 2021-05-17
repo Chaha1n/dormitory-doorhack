@@ -5,8 +5,7 @@
 
 #include <PN532.h>
 #define SERVO_PIN 9
-const uint8_t MY_WATCH[] = {0x4, 0x56, 0x2D, 0xEB, 0x2A, 0x55, 0x80};
-const uint8_t MY_TAG[] = {0xF1, 0xC1, 0x1D, 0x2,0, 0, 0};
+
 
 SoftwareSerial SWSerial( 10, 11 ); // RX, TX
 
