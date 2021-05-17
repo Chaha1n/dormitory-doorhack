@@ -26,7 +26,7 @@ boolean compareUID(uint8_t a[],uint8_t b[]){
 void toggleDoorLock(){
   myservo.attach(SERVO_PIN);
   if(isDoorLocked)
-    myservo.write(180); 
+    myservo.write(90); 
   else 
     myservo.write(0);
    delay(300);
@@ -81,6 +81,7 @@ success = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A, &uid[0], &uidLength);
     if(compareUID(MY_WATCH,uid) || compareUID(MY_TAG,uid)){
       Serial.println("Verified");
       toggleDoorLock();
+      delay(1000);
       }
   }
 
